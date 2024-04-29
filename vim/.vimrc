@@ -52,7 +52,7 @@ if has('termguicolors')
 endif
 set colorcolumn=120
 set background=dark
-let g:everforst_background = 'soft'
+let g:everforst_background = 'hard'
 let g:everforest_better_performance = 1
 colorscheme everforest
 " }}}
