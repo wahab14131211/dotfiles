@@ -42,6 +42,8 @@ call plug#begin('~/.config/vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
+    Plug 'machakann/vim-highlightedyank'
+        let g:highlightedyank_highlight_duration=200
 call plug#end()
 " }}}
 
