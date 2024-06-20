@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+-- Custom neovim config file for common remaps
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) --open netrw (directory viewer) using space+p+v
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") --move highlighted text up and down (and into if statements)
@@ -20,8 +20,10 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]) --delete highlight without addi
 vim.keymap.set("i", "<C-c>", "<Esc>") --remap Ctrl+c to Esc to allow visual block test insertion with Ctrl+c
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
-vim.keymap.set("n", "Q", "<nop>") --apparently Q is not a useful command, so remap it to nothing
+vim.keymap.set("n", "Q", "<nop>") --Q will exit without saving. remove this in favour of :q!
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) --use space+s to search and replace current word
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }) --use space+x to make current file executable
 
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") --clear highlights on pressing <Esc>
