@@ -18,12 +18,11 @@ vim.keymap.set("n", "<leader>Y", [["+Y]]) --use space+y to yank something into +
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]]) --delete highlight without adding to the register using space+d
 
 vim.keymap.set("i", "<C-c>", "<Esc>") --remap Ctrl+c to Esc to allow visual block test insertion with Ctrl+c
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 vim.keymap.set("n", "Q", "<nop>") --Q will exit without saving. remove this in favour of :q!
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) --use space+s to search and replace current word
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true }) --use space+x to make current file executable
 
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>") --clear highlights on pressing <Esc>
